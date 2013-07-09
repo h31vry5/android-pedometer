@@ -50,6 +50,7 @@ import android.widget.Toast;
  * interact with the user, rather than doing something more disruptive such as
  * calling startActivity().
  */
+
 public class StepService extends Service {
 	private static final String TAG = "name.bagi.levente.pedometer.StepService";
     private SharedPreferences mSettings;
@@ -163,6 +164,7 @@ public class StepService extends Service {
         Log.i(TAG, "[SERVICE] onStart");
         super.onStart(intent, startId);
     }
+    
 
     @Override
     public void onDestroy() {
@@ -397,6 +399,7 @@ public class StepService extends Service {
     private void acquireWakeLock() {
         PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
         int wakeFlags;
+        
         if (mPedometerSettings.wakeAggressively()) {
             wakeFlags = PowerManager.SCREEN_DIM_WAKE_LOCK | PowerManager.ACQUIRE_CAUSES_WAKEUP;
         }
@@ -406,6 +409,8 @@ public class StepService extends Service {
         else {
             wakeFlags = PowerManager.PARTIAL_WAKE_LOCK;
         }
+        
+        
         wakeLock = pm.newWakeLock(wakeFlags, TAG);
         wakeLock.acquire();
     }

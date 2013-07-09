@@ -26,6 +26,7 @@ import android.preference.PreferenceActivity;
  * Started when the user click Settings from the main menu.
  * @author Levente Bagi
  */
+
 public class Settings extends PreferenceActivity {
     /** Called when the activity is first created. */
     @Override

@@ -19,6 +19,7 @@
 package name.bagi.levente.pedometer;
 
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Context;
@@ -188,8 +189,9 @@ public class Pedometer extends Activity {
     
     @Override
     protected void onPause() {
+    	
         Log.i(TAG, "[ACTIVITY] onPause");
-        if (mIsRunning) {
+        /*if (mIsRunning) {
             unbindStepService();
         }
         if (mQuitting) {
@@ -197,10 +199,11 @@ public class Pedometer extends Activity {
         }
         else {
             mPedometerSettings.saveServiceRunningWithTimestamp(mIsRunning);
-        }
+        }*/
 
         super.onPause();
         savePaceSetting();
+        
     }
 
     @Override
@@ -388,7 +391,8 @@ public class Pedometer extends Activity {
     private static final int SPEED_MSG = 4;
     private static final int CALORIES_MSG = 5;
     
-    private Handler mHandler = new Handler() {
+    @SuppressLint("HandlerLeak")
+	private Handler mHandler = new Handler() {
         @Override public void handleMessage(Message msg) {
             switch (msg.what) {
                 case STEPS_MSG:

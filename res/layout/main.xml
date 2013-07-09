@@ -7,6 +7,7 @@
     android:background="@color/screen_background">
     
     <LinearLayout android:id="@+id/row_1"
+        android:baselineAligned="false"
         android:orientation="horizontal" 
         android:layout_width="fill_parent" 
         android:layout_height="wrap_content" 
@@ -71,6 +72,7 @@
     </LinearLayout>
         
     <LinearLayout android:id="@+id/row_2"
+        android:baselineAligned="false"
         android:orientation="horizontal" 
         android:layout_width="fill_parent" 
         android:layout_height="wrap_content" 
@@ -161,14 +163,14 @@
     </LinearLayout>
 
     <!-- Desired pace/speed row -->
+
     <LinearLayout
         android:id="@+id/desired_pace_control"
-        android:paddingTop="@dimen/row_spacing" 
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/row_spacing" >
     
         <!-- Button "-", for decrementing desired pace/speed -->
         <Button android:id="@+id/button_desired_pace_lower"
@@ -207,5 +209,26 @@
             android:layout_height="@dimen/button"/>
 
     </LinearLayout>
-   
+	<!-- 
+    <LinearLayout
+        android:id="@+id/deals"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/deals_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/deals"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <ListView
+            android:id="@+id/deals_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>
+
+    </LinearLayout>
+    -->
 </LinearLayout>
