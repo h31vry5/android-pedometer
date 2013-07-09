@@ -188,6 +188,8 @@ public class Pedometer extends Activity {
     }
     
     @Override
+    //TODO: This was commented out to let the app run in back ground
+    //Figure out what is really going on
     protected void onPause() {
     	
         Log.i(TAG, "[ACTIVITY] onPause");

@@ -13,24 +13,26 @@
         android:layout_height="wrap_content" 
         android:paddingBottom="@dimen/row_spacing">
     
-        <LinearLayout android:id="@+id/box_steps"
-            android:orientation="vertical"
-            android:layout_width="fill_parent" 
+        <LinearLayout
+            android:id="@+id/box_steps"
+            android:layout_width="148dp"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:paddingRight="@dimen/margin"
-            android:layout_weight="1">
-        
-            <TextView android:id="@+id/step_value"
-                android:textSize="@dimen/value"
-                android:layout_width="fill_parent" 
+            android:orientation="vertical"
+            android:paddingRight="@dimen/margin" >
+            
+        	<!--Steps -->
+            <TextView
+                android:id="@+id/step_value"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal" 
-                android:background="@color/display_background" 
-                android:paddingLeft="@dimen/padding" 
-                android:paddingRight="@dimen/padding" 
+                android:background="@color/display_background"
+                android:gravity="center_horizontal"
+                android:paddingLeft="@dimen/padding"
+                android:paddingRight="@dimen/padding"
                 android:paddingTop="@dimen/padding"
-                android:text=""/>
+                android:textSize="@dimen/value" />
+
             <TextView android:id="@+id/step_units"
                 android:gravity="center_horizontal"
                 android:layout_width="fill_parent"
@@ -41,34 +43,38 @@
                 android:paddingBottom="@dimen/padding"/>
 
         </LinearLayout>
+        
+		<LinearLayout
+		    android:id="@+id/box_calories"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:gravity="center_horizontal"
+		    android:orientation="vertical"
+		    android:paddingRight="@dimen/margin" >
 
-        <LinearLayout android:id="@+id/box_distance"
-            android:orientation="vertical"
-            android:layout_width="fill_parent" 
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:layout_weight="1">
-            
-            <TextView android:id="@+id/distance_value"
-                android:textSize="@dimen/value"
-                android:layout_width="fill_parent" 
+			<TextView
+			    android:id="@+id/calories_value"
+			    android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal" 
-                android:background="@color/display_background" 
-                android:paddingTop="@dimen/padding" 
-                android:paddingRight="@dimen/padding" 
-                android:paddingLeft="@dimen/padding"
-                android:text=""/>
-            <TextView android:id="@+id/distance_units"
+                android:background="@color/display_background"
                 android:gravity="center_horizontal"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/units"
-                android:text="@string/kilometers" 
-                android:background="@color/display_background" 
-                android:paddingBottom="@dimen/padding"/>
+                android:paddingLeft="@dimen/padding"
+                android:paddingRight="@dimen/padding"
+                android:paddingTop="@dimen/padding"
+                android:textSize="@dimen/value" />
 
+			<TextView
+			    android:id="@+id/calories_units"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:background="@color/display_background"
+			    android:gravity="center_horizontal"
+			    android:paddingBottom="@dimen/padding"
+			    android:text="@string/calories_burned"
+			    android:textSize="@dimen/units" />
+                         
         </LinearLayout>
+        
     </LinearLayout>
         
     <LinearLayout android:id="@+id/row_2"
@@ -133,14 +139,17 @@
                 android:background="@color/display_background"/>
         </LinearLayout>
 
-        <LinearLayout android:id="@+id/box_calories"
-            android:orientation="vertical" 
-            android:layout_height="wrap_content"
+       <LinearLayout android:id="@+id/box_distance"
+            android:orientation="vertical"
+            android:paddingRight="@dimen/margin"  
+            android:layout_height="wrap_content" 
             android:layout_width="fill_parent"
             android:layout_weight="1">
-        
-            <TextView android:id="@+id/calories_value"
-                android:gravity="center_horizontal"
+            
+            <!-- Distance -->
+           <TextView
+               android:id="@+id/distance_value"
+               android:gravity="center_horizontal"
                 android:layout_width="fill_parent" 
                 android:layout_height="wrap_content" 
                 android:background="@color/display_background" 
@@ -149,16 +158,18 @@
                 android:paddingRight="@dimen/padding" 
                 android:paddingTop="@dimen/padding"
                 android:text=""/>
-            <TextView android:id="@+id/calories_units"
-                android:gravity="center_horizontal"
+
+            <TextView
+                android:id="@+id/distance_units"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/units" 
-                android:text="@string/calories_burned" 
-                android:paddingBottom="@dimen/padding" 
-                android:background="@color/display_background"/>
-                         
-        </LinearLayout>
+                android:background="@color/display_background"
+                android:gravity="center_horizontal"
+                android:paddingBottom="@dimen/padding"
+                android:text="@string/kilometers"
+                android:textSize="@dimen/units" />
+
+        </LinearLayout> 
 
     </LinearLayout>
 
@@ -174,7 +185,7 @@
     
         <!-- Button "-", for decrementing desired pace/speed -->
         <Button android:id="@+id/button_desired_pace_lower"
-            android:text="-"
+            android:text="@string/minus"
             android:textSize="@dimen/button_sign"
             android:layout_width="@dimen/button"
             android:layout_height="@dimen/button"/>
@@ -203,7 +214,7 @@
 
         <!-- Button "+", for incrementing desired pace/speed -->
         <Button android:id="@+id/button_desired_pace_raise"
-            android:text="+"
+            android:text="@string/plus"
             android:textSize="@dimen/button_sign"
             android:layout_width="@dimen/button"
             android:layout_height="@dimen/button"/>

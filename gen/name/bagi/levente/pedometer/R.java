@@ -53,20 +53,20 @@ public final class R {
         public static final int line40=0x7f020002;
     }
     public static final class id {
-        public static final int box_calories=0x7f09000e;
-        public static final int box_distance=0x7f090004;
+        public static final int box_calories=0x7f090004;
+        public static final int box_distance=0x7f09000e;
         public static final int box_pace=0x7f090008;
         public static final int box_speed=0x7f09000b;
         public static final int box_steps=0x7f090001;
         public static final int button_desired_pace_lower=0x7f090012;
         public static final int button_desired_pace_raise=0x7f090015;
-        public static final int calories_units=0x7f090010;
-        public static final int calories_value=0x7f09000f;
+        public static final int calories_units=0x7f090006;
+        public static final int calories_value=0x7f090005;
         public static final int desired_pace_control=0x7f090011;
         public static final int desired_pace_label=0x7f090013;
         public static final int desired_pace_value=0x7f090014;
-        public static final int distance_units=0x7f090006;
-        public static final int distance_value=0x7f090005;
+        public static final int distance_units=0x7f090010;
+        public static final int distance_value=0x7f09000f;
         public static final int pace_units=0x7f09000a;
         public static final int pace_value=0x7f090009;
         public static final int row_1=0x7f090000;
@@ -122,11 +122,13 @@ public final class R {
         public static final int medium=0x7f08001f;
         public static final int miles=0x7f080006;
         public static final int miles_per_hour=0x7f080009;
+        public static final int minus=0x7f08005a;
         public static final int notification_subtitle=0x7f080001;
         public static final int operation_level_setting=0x7f080024;
         public static final int operation_level_setting_details=0x7f080025;
         public static final int operation_level_setting_title=0x7f080026;
         public static final int pause=0x7f080011;
+        public static final int plus=0x7f08005b;
         public static final int pounds=0x7f08000e;
         public static final int quit=0x7f080059;
         public static final int reset=0x7f080013;
