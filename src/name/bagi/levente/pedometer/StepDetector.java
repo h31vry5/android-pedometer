@@ -62,7 +62,8 @@ public class StepDetector implements SensorEventListener
     }
     
     //public void onSensorChanged(int sensor, float[] values) {
-    public void onSensorChanged(SensorEvent event) {
+    @SuppressWarnings("deprecation")
+	public void onSensorChanged(SensorEvent event) {
         Sensor sensor = event.sensor; 
         synchronized (this) {
             if (sensor.getType() == Sensor.TYPE_ORIENTATION) {

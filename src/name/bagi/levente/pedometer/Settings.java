@@ -29,7 +29,8 @@ import android.preference.PreferenceActivity;
 
 public class Settings extends PreferenceActivity {
     /** Called when the activity is first created. */
-    @Override
+    @SuppressWarnings("deprecation")
+	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         

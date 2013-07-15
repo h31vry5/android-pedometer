@@ -159,7 +159,8 @@ public class StepService extends Service {
         Toast.makeText(this, getText(R.string.started), Toast.LENGTH_SHORT).show();
     }
     
-    @Override
+    @SuppressWarnings("deprecation")
+	@Override
     public void onStart(Intent intent, int startId) {
         Log.i(TAG, "[SERVICE] onStart");
         super.onStart(intent, startId);
@@ -362,9 +363,10 @@ public class StepService extends Service {
     /**
      * Show a notification while this service is running.
      */
-    private void showNotification() {
+    @SuppressWarnings("deprecation")
+	private void showNotification() {
         CharSequence text = getText(R.string.app_name);
-        Notification notification = new Notification(R.drawable.ic_notification, null,
+		Notification notification = new Notification(R.drawable.ic_notification, null,
                 System.currentTimeMillis());
         notification.flags = Notification.FLAG_NO_CLEAR | Notification.FLAG_ONGOING_EVENT;
         Intent pedometerIntent = new Intent();
@@ -396,7 +398,8 @@ public class StepService extends Service {
         }
     };
 
-    private void acquireWakeLock() {
+    @SuppressWarnings("deprecation")
+	private void acquireWakeLock() {
         PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
         int wakeFlags;
         
